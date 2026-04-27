@@ -1,0 +1,11 @@
+{
+  "vimMode": true,
+  "showUnsupportedFiles": true,
+  "spellcheck": false,
+  "showLineNumber": true,
+  "propertiesInDocument": "visible",
+  "promptDelete": false,
+  "newFileLocation": "current",
+  "alwaysUpdateLinks": true,
+  "attachmentFolderPath": "01_sources/_assets"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "conv-1777300263597-i9rb2xmbs",
+  "providerId": "claude",
+  "title": "# 知识库搭建\n\n**标题建议：**\n\n- 📚 Obsidian 知识库搭建与整理\n- 🗂...",
+  "titleGenerationStatus": "success",
+  "createdAt": 1777300263606,
+  "updatedAt": 1777300751760,
+  "lastResponseAt": 1777300674281,
+  "sessionId": "185bd109-e317-4cdd-aa1c-a4c0871f5a95",
+  "providerState": {
+    "providerSessionId": "185bd109-e317-4cdd-aa1c-a4c0871f5a95"
+  },
+  "currentNote": "llm_wiki.md",
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 16469,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 0,
+    "contextWindow": 200000,
+    "contextTokens": 16469,
+    "percentage": 8,
+    "contextWindowIsAuthoritative": true
+  }
+}
