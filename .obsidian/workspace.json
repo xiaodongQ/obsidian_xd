@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CLAUDE.md",
+                "file": "01_sources/_clippings/受 Karpathy 启发的 Claude Code 指南.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,6 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "01_sources/_clippings/受 Karpathy 启发的 Claude Code 指南.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,6 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "01_sources/_clippings/受 Karpathy 启发的 Claude Code 指南.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,61 +125,25 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "01_sources/_clippings/受 Karpathy 启发的 Claude Code 指南.md"
+              }
             }
           },
           {
-            "id": "ab2bbfedfcacbe3f",
+            "id": "0f8a2d9962953587",
             "type": "leaf",
             "state": {
               "type": "claudian-view",
               "state": {}
             }
-          },
-          {
-            "id": "0a0796130adecdc2",
-            "type": "leaf",
-            "state": {
-              "type": "terminal:terminal",
-              "state": {
-                "terminal:terminal": {
-                  "cwd": "/Users/xd/Documents/note/obsidian_xd",
-                  "focus": false,
-                  "profile": {
-                    "args": [
-                      "--login"
-                    ],
-                    "executable": "/bin/zsh",
-                    "followTheme": true,
-                    "name": "",
-                    "platforms": {
-                      "darwin": true
-                    },
-                    "pythonExecutable": "python3",
-                    "restoreHistory": false,
-                    "rightClickAction": "copyPaste",
-                    "successExitCodes": [
-                      "0",
-                      "SIGINT",
-                      "SIGTERM"
-                    ],
-                    "terminalOptions": {
-                      "documentOverride": null
-                    },
-                    "type": "integrated",
-                    "useWin32Conhost": true
-                  },
-                  "serial": null
-                }
-              }
-            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 442.5
+    "width": 354.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -192,22 +158,33 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "0a0796130adecdc2",
+  "active": "7c3e7e705703c955",
   "lastOpenFiles": [
     "CLAUDE.md",
+    "01_sources/_clippings/受 Karpathy 启发的 Claude Code 指南.md",
+    "01_sources/_clippings/490万浏览量的方案：用 LLM 构建持续更新积累的个人知识库-腾讯云开发者社区-腾讯云 1.md",
+    "02_wiki/RAG_对比.md",
+    "01_sources/_assets/截屏2026-04-29 22.21.09.png",
+    "02_wiki/LLM_Wiki_模式.md",
+    "01_sources/知识库设计说明/llm_wiki.md",
+    "01_sources/_draft/test测试.md",
+    "01_sources/_draft",
+    "01_sources/_assets",
+    "01_sources/_Clippings/490万浏览量的方案：用 LLM 构建持续更新积累的个人知识库-腾讯云开发者社区-腾讯云.md",
+    "02_wiki/创建型设计模式.md",
+    "01_sources/_Clippings/andrej-karpathy-skillsREADME.zh.md at main 1.md",
+    "01_sources/_Clippings/andrej-karpathy-skillsREADME.zh.md at main.md",
+    "01_sources/_Clippings/forrestchangandrej-karpathy-skills A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls..md",
+    "01_sources/_clippings",
     "01_sources/_Excalidraw/未命名.md",
     "02_wiki/设计原则.md",
-    "02_wiki/LLM_Wiki_模式.md",
-    "02_wiki/RAG_对比.md",
     "01_sources/_Excalidraw/Drawing_2026-04-29_201933.excalidraw.md",
     "01_sources/_Excalidraw/Drawing 2026-04-29_200458.excalidraw.md",
     "01_sources/devNoteBackup/各分类记录/设计模式.md",
     "01_sources/devNoteBackup/各分类记录/Rust/Rust.md",
-    "01_sources/知识库设计说明/llm_wiki.md",
     "01_sources/知识库设计说明/未命名.md",
-    "01_sources/_Excalidraw",
+    "01_sources/_excalidraw",
     "Excalidraw/Drawing 2026-04-29_200027.excalidraw.md",
-    "02_wiki/创建型设计模式.md",
     "02_wiki/结构型设计模式.md",
     "01_sources/devNoteBackup/README.md",
     "01_sources/devNoteBackup/resource.md",
@@ -217,19 +194,8 @@
     "01_sources/devNoteBackup/resource/google开源代码规范/google-shell-styleguide/a_conclusion.rst",
     "01_sources/devNoteBackup/resource/google开源代码规范/google-shell-styleguide/9_calling_commands.rst",
     "01_sources/devNoteBackup/resource/google开源代码规范/google-shell-styleguide/8_naming_conventions.rst",
-    "01_sources/devNoteBackup/resource/google开源代码规范/google-shell-styleguide/7_features_and_bugs.rst",
-    "01_sources/devNoteBackup/resource/google开源代码规范/google-shell-styleguide/6_formatting.rst",
-    "01_sources/devNoteBackup/resource/google开源代码规范/google-shell-styleguide/5_comments.rst",
     "01_sources/devNoteBackup/各分类记录/blockchain/密码学_学习笔记.md",
     "01_sources/devNoteBackup/各分类记录/blockchain/zk_learn_note.md",
-    "01_sources/devNoteBackup/各分类记录/blockchain/solidity_note.md",
-    "01_sources/devNoteBackup/各分类记录/Rust/rust_relearn_note.md",
-    "01_sources/devNoteBackup/translation/xd_97ThingsEveryProgrammerShouldKnow/README.md",
-    "01_sources/devNoteBackup/translation/xd_97ThingsEveryProgrammerShouldKnow/BeautyIsInSimplicity.md",
-    "01_sources/devNoteBackup/translation/xd_97ThingsEveryProgrammerShouldKnow/AutomateYourCodingStandard.md",
-    "01_sources/devNoteBackup/translation/xd_97ThingsEveryProgrammerShouldKnow/AskWhatWouldtheUserDo.md",
-    "01_sources/devNoteBackup/translation/xd_97ThingsEveryProgrammerShouldKnow/ApplyFunctionalProgrammingPrinciples.md",
-    "01_sources/devNoteBackup/translation/xd_97ThingsEveryProgrammerShouldKnow/ActWithPrudence.md",
     "01_sources/devNoteBackup/各分类记录/google_cpp代码规范.jpg",
     "01_sources/devNoteBackup/各分类记录/UML类图图示.png",
     "devNoteBackup/各分类记录/google_cpp代码规范.jpg",
