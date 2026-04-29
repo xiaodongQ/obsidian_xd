@@ -8,7 +8,7 @@
 obsidian_xd/
 ├── 01_sources/        # 源文档目录（只读，Immutable）
 ├── 02_wiki/           # AI 生成的 wiki 内容
-└── CLAUDE.md        # 本文件 - AI 维护指南
+└── CLAUDE.md          # 本文件 - AI维护指南
 ```
 
 ## 核心原则
@@ -51,7 +51,7 @@ obsidian_xd/
 ## 命名规范
 
 - Wiki 页面：使用中文标题，驼峰式，如 `机器学习基础.md`
-- 实体页面：使用具体名称，如 `Transformer 架构.md`
+- 实体页面：使用具体名称，如 `Transformer架构.md`
 - 概念页面：描述性标题，如 `注意力机制.md`
 
 ## Wiki 页面格式
