@@ -10,7 +10,7 @@ obsidian_xd/
 │   ├── _clippings/    # 外部下载内容（网页、PDF、文档等）→ 需要摄入到 wiki
 │   ├── _draft/       # 临时草稿 → 不摄入
 │   ├── _excalidraw/  # 画图文件 → 不摄入
-│   └── _assets/      # 静态资源 → 不摄入
+│   └── _assets/      # 静态资源，图片引用等 → 不摄入
 ├── 02_wiki/           # AI 生成的 wiki 内容
 └── CLAUDE.md          # 本文件 - AI维护指南
 ```
