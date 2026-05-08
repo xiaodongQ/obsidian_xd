@@ -1,6 +1,6 @@
 # 一个文件让 AI Coding 效率翻倍：AGENTS.md 实践指南
 
-> 来源：https://mp.weixin.qq.com/s/fBBBSfQajYjYtngZAitZCA
+> 来源：https://view.inews.qq.com/k/20260506A0271500
 > 作者：岛风（阿里云开发者）
 > 标签：AGENTS.md, AI Coding, Codex, Claude Code, 最佳实践
 
