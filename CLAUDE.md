@@ -7,13 +7,34 @@
 ```
 obsidian_xd/
 ├── 01_sources/        # 源文档目录（只读，Immutable）
-│   ├── _clippings/    # 外部下载内容（网页、PDF、文档等）→ 需要摄入到 wiki
-│   ├── _draft/       # 临时草稿 → 不摄入
-│   ├── _excalidraw/  # 画图文件 → 不摄入
-│   └── _assets/      # 静态资源，图片引用等 → 不摄入
+│   ├── _clippings/    # 外部下载内容（网页、PDF、文档等）→ 待摄入到 wiki
+│   ├── _archived/     # 已摄入的原文归档（扁平存放）
+│   ├── _draft/        # 临时草稿 → 不摄入
+│   ├── _excalidraw/   # 画图文件 → 不摄入
+│   ├── _assets/       # 静态资源，图片引用等 → 不摄入
+│   └── 知识库设计说明/ # 设计文档和规划
 ├── 02_wiki/           # AI 生成的 wiki 内容
 └── CLAUDE.md          # 本文件 - AI维护指南
 ```
+
+## 摄入后归档规则
+
+> **强制规则**：每次完成 Wiki 摄入后，必须将对应源文档从 `_clippings/` 移到 `_archived/`。
+
+**原因**：
+- `_clippings/` 是待处理入口，保持轻盈
+- `_archived/` 是已摄入原文的备份仓库，扁平存放（文件名带来源关键词）
+- Wiki 页面通过 `source:` 元数据记录来源，依赖本地文件时从 `_archived/` 查找
+
+**判断标准**：
+- 该源文档的核心知识已被提取并整合进 Wiki 页面 → 归档
+- 该源文档还有未处理的子主题或矛盾点待标记 → 保留在 `_clippings/`
+
+**操作流程**：
+1. 完成 Wiki 页面创建/更新
+2. 将源文档从 `01_sources/_clippings/` 移到 `01_sources/_archived/`
+3. 保持文件名不变（已含来源关键词）
+4. git add + commit + push
 
 ## 核心原则
 
