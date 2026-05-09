@@ -9,10 +9,12 @@ source: 01_sources/调研/Warp_Terminal_调研.md
 
 ## 概述
 
-**Warp** 是一个用 Rust 构建的 GPU 加速终端，从 2026 年起定位为 **Agentic Development Environment**（Agentic 开发环境）。2026 年开源（AGPL v3 + MIT），GitHub 突破 **50,000 Stars**，超过 70 万开发者使用。
+**Warp** 是一个用 Rust 构建的 GPU 加速终端，从 2026 年起定位为 **Agentic Development Environment**（Agentic 开发环境）。2026 年开源（AGPL v3 + MIT），GitHub 突破 **50,000 Stars**，超过 70 万开发者使用。支持的平台：macOS、Linux、Windows（Windows 11 专用安装包 via Warp 官方 fork 的 Microsoft Terminal）。
 
 > "Warp 不再是终端，而是一个 Agent 工作空间。"
 > — XDA Developers
+
+> ⚠️ **平台说明**：早期 Warp 仅 macOS，2026 年已扩展至 Linux 和 Windows。Windows 版通过 warpdotdev/microsoft-terminal 分支提供，仅支持 Windows 11。
 
 ## 核心定位演变
 

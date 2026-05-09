@@ -31,7 +31,7 @@
 | AI 原生 | ✅ 内置 AI + Agent Mode | ❌ | ❌ | ❌（需插件） |
 | GPU 渲染 | ✅ | ✅ | ✅ | ❌ |
 | 协作功能 | ✅ 共享 Workflows | ❌ | ❌ | ❌ |
-| 平台 | macOS + Linux | macOS + Linux | 全平台 | 仅 macOS |
+| 平台 | macOS + Linux + Windows（Windows 11 via 独立安装包） | macOS + Linux | 全平台 | 仅 macOS |
 | tmux 兼容 | ❌（自研 multiplexing） | ✅ | ✅ | ✅ |
 | 价格 | 免费 + Pro 订阅 | 免费 | 免费 | 免费 |
 
