@@ -1,0 +1,39 @@
+{
+  "version": "1.0",
+  "lastModified": "2026-05-13",
+  "description": "Topic Cluster 注册表，定义知识库 Wiki 的组织结构",
+  "topics": [
+    {
+      "id": "Claude_Code",
+      "name": "Claude Code",
+      "description": "Claude Code 使用方法、实践、AGENTS.md 模式",
+      "clusterDir": "Claude_Code",
+      "sourceTags": ["Claude_Code", "Claude", "AGENTS"],
+      "relatedTopics": []
+    },
+    {
+      "id": "Harness",
+      "name": "Harness Engineering",
+      "description": "Harness Engineering 核心概念、SPEC 设计规范",
+      "clusterDir": "Harness",
+      "sourceTags": ["Harness", "Engineering", "SPEC", "DDD", "OpenSpec"],
+      "relatedTopics": []
+    },
+    {
+      "id": "LLM_Agent",
+      "name": "LLM Agent",
+      "description": "LLM Agent、RAG、智能体外化、Wiki 模式",
+      "clusterDir": "LLM_Agent",
+      "sourceTags": ["LLM", "Agent", "RAG", "Wiki", "LLM_Wiki"],
+      "relatedTopics": []
+    },
+    {
+      "id": "Warp_Terminal",
+      "name": "Warp Terminal",
+      "description": "Warp Terminal 终端工具调研和使用",
+      "clusterDir": "Warp_Terminal",
+      "sourceTags": ["Warp", "Terminal"],
+      "relatedTopics": []
+    }
+  ]
+}
