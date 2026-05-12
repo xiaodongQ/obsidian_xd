@@ -1,29 +1,21 @@
 # 实用 Skills 和工具
 
 > 创建时间：2026-05-12
+> 更新：2026-05-12（改造为 skills/ 目录入口）
 
 ---
 
-## PPT-Master
+这是工具索引页，具体内容在 `skills/` 目录中。
 
-**用途**：用自然语言描述生成 PPTX 文件（有点耗 token，建议先出一版再改）
+## 目录
 
-**安装步骤**：
+### Skills（AI 技能，可直接作为 prompt / slash command 使用）
 
-```bash
-# 1. 克隆仓库
-git clone https://git-mirror.dahuatech.com/gh_hugohe3/ppt-master.git ppt-master
+| 名称 | 用途 |
+|------|------|
+| [PPT-Master](./skills/PPT_Master.md) | 用自然语言生成 PPTX 文件 |
+| [Prompt_Optimizer](./skills/Prompt_Optimizer_提示词优化器.md) | 将草稿 prompt 优化为 A/B/C/D 四种策略变体 |
 
-# 2. 安装依赖
-cd ppt-master
-pip install -r requirements.txt \
-  --trusted-host pypi.org \
-  --trusted-host files.pythonhosted.org \
-  --trusted-host pypi.python.org
+---
 
-# 3. 在 ppt-master 目录打开 Claude Code，用 prompt 创建 PPT
-```
-
-**流程**：用 AI 生成一版 PPT → 再人工改吧改吧（降 token 消耗）
-
-**注意**：仓库在内部 Git 镜像，外部可能无法直接访问
+> 新增 skill 时：在 `skills/` 目录新建 `.md` 文件，不要修改本文件内容。
