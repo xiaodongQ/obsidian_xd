@@ -2,8 +2,8 @@
 
 ## 基本信息
 - 创建时间：2026-05-13
-- 来源数量：2
-- Wiki 页面数量：2
+- 来源数量：3
+- Wiki 页面数量：3
 
 ## 关联 Sources
 
@@ -12,10 +12,13 @@
 | 万字干货：理解 Harness Engineering，看这一篇就够了.md | #Harness #Engineering | ✅ 已摄入 |
 | Harness Engineering：AI能在后端系统写代码吗.md | #Harness #Engineering | ⚠️ 待补全 |
 
+| CLI Anything / OpenCLI 调研.md | #Harness #CLI | ✅ 已摄入 |
+
 ## 关联 Wiki
 
 - `Harness_Engineering.md` — Harness Engineering 核心原理
 - `DDD_to_OpenSpec.md` — DDD to OpenSpec 设计规范
+- `CLI_Anything与OpenCLI.md` — CLI 工具的 Agent 化封装方案
 
 ## 知识小结
 
