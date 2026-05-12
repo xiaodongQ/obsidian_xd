@@ -2,7 +2,7 @@
 title: LLM Wiki 模式
 tags: [概念, 知识管理, RAG, AI, LLM, Obsidian]
 created: 2026-04-29
-source: 01_sources/_clippings/490万浏览量的方案：用 LLM 构建持续更新积累的个人知识库-腾讯云开发者社区-腾讯云 1.md
+source: 01_sources/_archived/490万浏览量的方案：用 LLM 构建持续更新积累的个人知识库-腾讯云开发者社区-腾讯云 1.md
 ---
 
 # LLM Wiki 模式

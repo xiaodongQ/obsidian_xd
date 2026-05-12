@@ -2,7 +2,7 @@
 title: Warp Terminal
 tags: [工具, AI Terminal, Agentic, Rust, 开发环境]
 created: 2026-05-09
-source: 01_sources/调研/Warp_Terminal_调研.md
+source: 01_sources/_archived/Warp_Terminal_调研.md
 ---
 
 # Warp Terminal

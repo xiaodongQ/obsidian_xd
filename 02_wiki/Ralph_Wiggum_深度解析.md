@@ -2,7 +2,7 @@
 title: Ralph Wiggum 深度解析
 tags: [概念, AI Coding, Ralph Loop, Context Rot, Claude Code]
 created: 2026-05-09
-source: 01_sources/_clippings/Ralph Wiggum 深度解析.md
+source: 01_sources/_archived/Ralph Wiggum 深度解析.md
 ---
 
 # Ralph Wiggum 深度解析

@@ -2,7 +2,7 @@
 title: Ralph Loop 实现方案
 tags: [AI Coding, Ralph Loop, Claude Code, Agent, 工具链]
 created: 2026-05-10
-source: 01_sources/_clippings/snarktankralph 实战指南.md
+source: 01_sources/_archived/snarktankralph 实战指南.md
 ---
 
 # Ralph Loop 实现方案

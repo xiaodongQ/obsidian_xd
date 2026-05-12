@@ -2,7 +2,7 @@
 title: Harness Engineering
 tags: [概念, AI Coding, 大模型工程, Harness, 后端]
 created: 2026-05-08
-source: 01_sources/_clippings/Harness Engineering：AI能在后端系统写代码吗.md
+source: 01_sources/_archived/Harness Engineering：AI能在后端系统写代码吗.md
 ---
 
 # Harness Engineering
@@ -73,3 +73,5 @@ Harness 本质是一个带有边界控制、工具路由与确定性反馈的 **
 
 - [[AGENTS.md]] - Harness 的落地工具之一
 - [[LLM_Wiki_模式]] - 与 LLM Wiki 模式的关系
+- [[LLM智能体外部化综述]] - Harness Engineering 的学术理论基础
+- [[Agent_Skill设计模式]] - Skill 是 Harness 中技能外部化的实现

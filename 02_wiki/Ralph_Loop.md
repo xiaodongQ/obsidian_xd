@@ -2,7 +2,7 @@
 title: Ralph Loop
 tags: [概念, AI Coding, Ralph Loop, Claude Code, 自主循环, Agent]
 created: 2026-05-09
-source: 01_sources/调研/Ralph_Loop_调研.md
+source: 01_sources/_archived/Ralph_Loop_调研.md
 ---
 
 # Ralph Loop

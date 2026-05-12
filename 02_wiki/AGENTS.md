@@ -2,7 +2,7 @@
 title: AGENTS.md
 tags: [概念, AI Coding, AGENTS.md, Codex, Claude Code]
 created: 2026-05-08
-source: 01_sources/_clippings/一个文件让AI Coding效率翻倍AGENTS.md实践指南.md
+source: 01_sources/_archived/一个文件让AI Coding效率翻倍AGENTS.md实践指南.md
 ---
 
 # AGENTS.md
@@ -107,3 +107,5 @@ AGENTS.md + lint 脚本 + 验证规范，本质上是在构建一个**反馈回�
 
 - [[Harness_Engineering]] - AGENTS.md 是 Harness 落地的具体工具之一
 - [[LLM_Wiki_模式]] - LLM Wiki 与 AI Coding 的关系
+- [[Agent_Skill设计模式]] - 基本约束用 AGENTS.md，复杂工作流用 Skill
+- [[Agent_Readiness]] - Agent Readiness 检查 AGENTS.md 是否存在

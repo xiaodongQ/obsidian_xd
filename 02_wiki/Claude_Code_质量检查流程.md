@@ -2,7 +2,7 @@
 title: Claude Code 质量检查流程
 tags: [AI Coding, Claude Code, 质量工程, DevOps, 最佳实践]
 created: 2026-05-10
-source: 01_sources/_clippings/我的 Claude Code 质量检查流程.md
+source: 01_sources/_archived/我的 Claude Code 质量检查流程.md
 ---
 
 # Claude Code 质量检查流程
