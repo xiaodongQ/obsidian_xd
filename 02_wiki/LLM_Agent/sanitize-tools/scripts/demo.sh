@@ -1,15 +1,14 @@
 #!/bin/bash
 # =============================================================================
-# ASan Bug Detection Demo
+# Valgrind Bug Detection Demo
 # =============================================================================
-# This script demonstrates how ASan detects three classic memory bugs:
+# This script demonstrates how Valgrind detects three classic memory bugs:
 #   1. use-after-free      — dereferencing a pointer after free()
 #   2. heap-buffer-overflow — writing past the end of a heap allocation
-#   3. stack-buffer-overflow — writing past the end of a stack array
+#   3. memory leak          — allocated memory never freed
 #
 # Run:  bash scripts/demo.sh
-# Requires: GCC ≥ 4.8 or Clang ≥ 3.1 with ASan runtime installed
-#           On many distros:  dnf install libasan  or  apt install libasan6
+# Requires: valgrind >= 3.23.0  (no special compiler flags needed)
 # =============================================================================
 
 DEMO_DIR="$(cd "$(dirname "$0")" && pwd)"
@@ -25,13 +24,6 @@ info()  { echo -e "${YELLOW}[INFO]${NC} $1"; }
 ok()   { echo -e "${GREEN}[ OK ]${NC} $1"; }
 err()  { echo -e "${RED}[FAIL]${NC} $1"; }
 
-# Check compiler
-if ! gcc -fsanitize=address -g -O1 -o /dev/null -x c - <<< 'int main(){}' 2>/dev/null; then
-  info "ASan is not available in this environment (libasan runtime not linked)."
-  info "The source files below are written to _build/ — copy to a machine with ASan installed."
-  echo ""
-fi
-
 # =============================================================================
 # BUG #1 — Use-After-Free
 # =============================================================================
@@ -44,30 +36,18 @@ cat > "$BUILD_DIR/uaf.c" << 'EOF'
 int main() {
     int *arr = malloc(4 * sizeof(int));
     free(arr);
-    arr[0] = 42;   // ASan: use-after-free
+    arr[0] = 42;   // Valgrind: Invalid write after free
     return 0;
 }
 EOF
 cat "$BUILD_DIR/uaf.c"
 
-info "Compile: gcc -fsanitize=address -g -O1 -o uaf _build/uaf.c"
-info "Run:     ./uaf"
+info "Compile: gcc -g -o uaf _build/uaf.c"
+info "Run:     valgrind --leak-check=full --track-origins=yes ./uaf"
 
-if gcc -fsanitize=address -g -O1 -o "$BUILD_DIR/uaf" "$BUILD_DIR/uaf.c" 2>/dev/null; then
-  echo "--- Actual ASan output below ---"
-  "$BUILD_DIR/uaf" 2>&1 || true
-else
-  echo "--- Simulated ASan output ---"
-  echo '================================================================='
-  echo '==12345== ERROR: AddressSanitizer: use-after-free on address 0x602000000038'
-  echo '0x602000000038 is located 0 bytes inside [0x602000000038,0x602000000048)'
-  echo 'allocated by thread T0 here:'
-  echo '    #0 0x4c2b8e in __interceptor_malloc'
-  echo '    #1 0x401286 in main _build/uaf.c:5'
-  echo 'Freed by thread T0:'
-  echo '    #0 0x4012a7 in main _build/uaf.c:6'
-  echo 'SUMMARY: AddressSanitizer: use-after-free'
-fi
+gcc -g -o "$BUILD_DIR/uaf" "$BUILD_DIR/uaf.c"
+echo "--- Valgrind output below ---"
+valgrind --leak-check=full --track-origins=yes "$BUILD_DIR/uaf" 2>&1 || true
 echo ""
 
 # =============================================================================
@@ -81,74 +61,60 @@ cat > "$BUILD_DIR/heap_overflow.c" << 'EOF'
 
 int main() {
     int *arr = malloc(4 * sizeof(int));  // 4 ints = 16 bytes
-    arr[4] = 123;  // ASan: heap-buffer-overflow (index 4 is the 5th int, past the end)
+    arr[4] = 123;  // Valgrind: write past the end of heap allocation
     free(arr);
     return 0;
 }
 EOF
 cat "$BUILD_DIR/heap_overflow.c"
 
-info "Compile: gcc -fsanitize=address -g -O1 -o heap_overflow _build/heap_overflow.c"
-info "Run:     ./heap_overflow"
+info "Compile: gcc -g -o heap_overflow _build/heap_overflow.c"
+info "Run:     valgrind --leak-check=full --track-origins=yes ./heap_overflow"
 
-if gcc -fsanitize=address -g -O1 -o "$BUILD_DIR/heap_overflow" "$BUILD_DIR/heap_overflow.c" 2>/dev/null; then
-  echo "--- Actual ASan output below ---"
-  "$BUILD_DIR/heap_overflow" 2>&1 || true
-else
-  echo "--- Simulated ASan output ---"
-  echo '================================================================='
-  echo '==12346== ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000048'
-  echo '0x602000000048 is located 4 bytes after 16-byte region [0x602000000040,0x602000000050)'
-  echo 'allocated by thread T0 here:'
-  echo '    #0 0x4c2b8e in __interceptor_malloc'
-  echo '    #1 0x401286 in main _build/heap_overflow.c:5'
-  echo 'SUMMARY: AddressSanitizer: heap-buffer-overflow'
-fi
+gcc -g -o "$BUILD_DIR/heap_overflow" "$BUILD_DIR/heap_overflow.c"
+echo "--- Valgrind output below ---"
+valgrind --leak-check=full --track-origins=yes "$BUILD_DIR/heap_overflow" 2>&1 || true
 echo ""
 
 # =============================================================================
-# BUG #3 — Stack Buffer Overflow
+# BUG #3 — Memory Leak
 # =============================================================================
-info "=== BUG #3: Stack Buffer Overflow ==="
-info "Source: _build/stack_overflow.c"
-cat > "$BUILD_DIR/stack_overflow.c" << 'EOF'
+info "=== BUG #3: Memory Leak ==="
+info "Source: _build/leak.c"
+cat > "$BUILD_DIR/leak.c" << 'EOF'
 #include <stdio.h>
+#include <stdlib.h>
 
 int main() {
-    int arr[4];    // 4 ints on the stack  [arr[0]..arr[3]]
-    arr[4] = 999;  // ASan: stack-buffer-overflow (arr[4] is past the end)
+    int *arr = malloc(4 * sizeof(int));  // allocated but never freed
+    arr[0] = 1;
+    arr[1] = 2;
+    // leak: arr is never freed
     return 0;
 }
 EOF
-cat "$BUILD_DIR/stack_overflow.c"
+cat "$BUILD_DIR/leak.c"
 
-info "Compile: gcc -fsanitize=address -g -O1 -o stack_overflow _build/stack_overflow.c"
-info "Run:     ./stack_overflow"
+info "Compile: gcc -g -o leak _build/leak.c"
+info "Run:     valgrind --leak-check=full --track-origins=yes ./leak"
 
-if gcc -fsanitize=address -g -O1 -o "$BUILD_DIR/stack_overflow" "$BUILD_DIR/stack_overflow.c" 2>/dev/null; then
-  echo "--- Actual ASan output below ---"
-  "$BUILD_DIR/stack_overflow" 2>&1 || true
-else
-  echo "--- Simulated ASan output ---"
-  echo '================================================================='
-  echo '==12347== ERROR: AddressSanitizer: stack-buffer-overflow on address 0x7fff12345678'
-  echo 'WRITE of size 4 at 0x7fff12345678 by thread T0:'
-  echo '    #0 0x401286 in main _build/stack_overflow.c:6'
-  echo 'SUMMARY: AddressSanitizer: stack-buffer-overflow'
-fi
+gcc -g -o "$BUILD_DIR/leak" "$BUILD_DIR/leak.c"
+echo "--- Valgrind output below ---"
+valgrind --leak-check=full --track-origins=yes "$BUILD_DIR/leak" 2>&1 || true
 echo ""
 
 # =============================================================================
 # Summary
 # =============================================================================
 info "=== Summary ==="
-info "All three bugs detected with the same compile flag: -fsanitize=address"
+info "All three bugs detected with Valgrind — no special compiler flags needed."
 info ""
-info "  Bug                       | Flag                          | ASan Error Type          "
-info "  --------------------------|-------------------------------|-------------------------"
-info "  Use-after-free            | -fsanitize=address -g -O1     | AddressSanitizer: use-after-free       "
-info "  Heap buffer overflow      | -fsanitize=address -g -O1     | AddressSanitizer: heap-buffer-overflow  "
-info "  Stack buffer overflow     | -fsanitize=address -g -O1     | AddressSanitizer: stack-buffer-overflow "
+info "  Bug                       | How to Trigger                 | Valgrind Error Type     "
+info "  --------------------------|--------------------------------|-------------------------"
+info "  Use-after-free            | free() then write              | Invalid write / read     "
+info "  Heap buffer overflow     | Write past end of malloc       | Invalid write            "
+info "  Memory leak              | malloc() without free()        | definitely lost          "
 info ""
-info "Key:  -g   (debug symbols for source-level stack traces)"
-info "      -O1  (ASan requires at least -O1 for full accuracy)"
+info "Key:  --leak-check=full     (enable detailed leak reporting)"
+info "      --track-origins=yes  (show where uninitialized values came from)"
+info "      -g                   (debug symbols for source-level stack traces)"
