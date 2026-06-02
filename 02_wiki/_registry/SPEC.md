@@ -56,6 +56,10 @@ date: 2026-05-13
 - Source 存入 `_archived/` 后即视为已归档
 - Wiki 生成不是归档的前置条件
 
+### _archived/ 内容规则
+- `_archived/` 目录内的 source 文件**不摄入**（不生成 wiki）
+- 归档是最终状态，文件不再参与 wiki 生成流程
+
 ---
 
 ## 四、_meta.md 格式规范
