@@ -1,3 +1,9 @@
+---
+title: "Warp Terminal 调研"
+tags: ['Warp', 'Terminal', '开发环境']
+date: 2026-05-09
+---
+
 # Warp Terminal 调研
 
 > 标签：Warp, AI Terminal, Agentic, Rust, 开发环境

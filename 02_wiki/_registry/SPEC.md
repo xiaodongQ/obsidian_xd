@@ -10,6 +10,8 @@
 | 版本 | 日期 | 变更 |
 |------|------|------|
 | 1.0 | 2026-05-13 | 初始版本，基于 Topic Cluster 重构 |
+| 1.1 | 2026-06-14 | 增加 _processing/ 缓冲目录；topics.json 增加 parentId/layer；收紧 V10 命名规范；明确 收藏/_clippings 分工 |
+| 1.1 | 2026-06-14 | 增加 _processing/ 缓冲目录；topics.json 增加 parentId/layer；收紧 V10 命名规范；明确 收藏/_clippings 分工 |
 
 ---
 
@@ -35,6 +37,18 @@
 ---
 
 ## 三、Source 管理规则
+
+### Source 目录分工
+- `_clippings/` — 外部文章/博客的直接剪藏，未做二次加工
+- `收藏/` — 有二次加工的精选内容（工具推荐、配置心得等）
+- `_processing/` — 处理中/待确认归属的缓冲区，完成后迁入对应目录
+- `_archived/` — 已归档的 source，不再参与 wiki 生成流程
+
+### Source 目录分工
+- `_clippings/` — 外部文章/博客的直接剪藏，未做二次加工
+- `收藏/` — 有二次加工的精选内容（工具推荐、配置心得等）
+- `_processing/` — 处理中/待确认归属的缓冲区，完成后迁入对应目录
+- `_archived/` — 已归档的 source，不再参与 wiki 生成流程
 
 ### 微信文章处理
 - mp.weixin.qq.com 文章存入 `_archived/`，标注 `#wechat` 标签
@@ -100,6 +114,7 @@ date: 2026-05-13
 - ✅ 使用中文描述性命名：`质量检查流程.md`
 - ✅ 下划线分隔：`LLM_Wiki_模式.md`
 - ❌ 不允许：空格、特殊字符（除 `-` `_` `.`）
+- ❌ 不允许：全角字符、括号（）、中文引号等
 - ❌ 不允许：纯英文文件名
 
 ---
@@ -115,7 +130,9 @@ date: 2026-05-13
 │   └── _template_meta.md ← _meta.md 模板
 ├── _topics/
 │   └── README.md         ← 全部 Topic 一览
-├── Claude_Code/          ← Topic Cluster
+├── _processing/          ← Wiki 待确认 cluster（缓冲区）
+│   └── .gitkeep
+├── Claude_Code/           ← Topic Cluster
 │   └── _meta.md
 ├── Harness/
 │   └── _meta.md
@@ -124,9 +141,22 @@ date: 2026-05-13
 └── Warp_Terminal/
     └── _meta.md
 
+01_sources/
+├── _processing/          ← Source 待确认归属（缓冲区）
+│   └── .gitkeep
+├── _clippings/           ← 外部文章直接剪藏
+├── 收藏/                 ← 精选内容（二次加工）
+├── _archived/            ← 已归档 source
+└── ...
+
 scripts/
 └── validate_kb.py        ← 验收脚本
 ```
+
+### 02_wiki 根目录规则
+- `02_wiki/` 根目录下**禁止直接放置** `.md` 文件
+- 新 wiki 页必须属于某个 cluster 目录，或先放入 `_processing/`
+- 由 cluster 迁移出来后删除 `_processing/` 引用
 
 ---
 

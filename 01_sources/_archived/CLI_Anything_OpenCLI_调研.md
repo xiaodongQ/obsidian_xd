@@ -1,3 +1,9 @@
+---
+title: "CLI Anything / OpenCLI 调研"
+tags: ['CLI', 'OpenCLI', 'Harness']
+date: 2026-05-09
+---
+
 # CLI Anything / OpenCLI 调研
 
 > 调研时间：2026-05-13

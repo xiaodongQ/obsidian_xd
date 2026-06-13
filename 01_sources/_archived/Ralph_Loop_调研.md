@@ -1,3 +1,9 @@
+---
+title: "Ralph Loop 调研"
+tags: ['Ralph_Loop', 'Agent', 'Claude_Code']
+date: 2026-05-09
+---
+
 # Ralph Loop 调研
 
 > 标签：Ralph Loop, AI Coding, 自主循环, Claude Code, Agent

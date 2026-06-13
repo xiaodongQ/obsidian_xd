@@ -3,7 +3,7 @@
 ## 基本信息
 - 创建时间：2026-05-13
 - 来源数量：3
-- Wiki 页面数量：3
+- Wiki 页面数量：5
 
 ## 关联 Sources
 
@@ -19,6 +19,8 @@
 - `Harness_Engineering.md` — Harness Engineering 核心原理
 - `DDD_to_OpenSpec.md` — DDD to OpenSpec 设计规范
 - `CLI_Anything与OpenCLI.md` — CLI 工具的 Agent 化封装方案
+- `OpenCLI_jackwener-opencli_调研.md` — jackwener/opencli 工程化工具调研
+- `OpenCLI_Specification_OCS_v01_调研.md` — OpenCLI Specification（OCS v0.1）规范调研
 
 ## 知识小结
 

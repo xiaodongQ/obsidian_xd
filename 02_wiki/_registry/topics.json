@@ -1,6 +1,6 @@
 {
-  "version": "1.0",
-  "lastModified": "2026-05-13",
+  "version": "1.1",
+  "lastModified": "2026-06-14",
   "description": "Topic Cluster 注册表，定义知识库 Wiki 的组织结构",
   "topics": [
     {
@@ -8,32 +8,82 @@
       "name": "Claude Code",
       "description": "Claude Code 使用方法、实践、AGENTS.md 模式",
       "clusterDir": "Claude_Code",
-      "sourceTags": ["Claude_Code", "Claude", "AGENTS"],
-      "relatedTopics": []
+      "sourceTags": [
+        "Claude_Code",
+        "Claude",
+        "AGENTS"
+      ],
+      "relatedTopics": [],
+      "parentId": null,
+      "layer": 1,
+      "tags": [
+        "Claude_Code",
+        "Claude",
+        "AGENTS"
+      ]
     },
     {
       "id": "Harness",
       "name": "Harness Engineering",
       "description": "Harness Engineering 核心概念、SPEC 设计规范",
       "clusterDir": "Harness",
-      "sourceTags": ["Harness", "Engineering", "SPEC", "DDD", "OpenSpec"],
-      "relatedTopics": []
+      "sourceTags": [
+        "Harness",
+        "Engineering",
+        "SPEC",
+        "DDD",
+        "OpenSpec"
+      ],
+      "relatedTopics": [],
+      "parentId": null,
+      "layer": 1,
+      "tags": [
+        "Harness",
+        "Engineering",
+        "SPEC",
+        "DDD",
+        "OpenSpec"
+      ]
     },
     {
       "id": "LLM_Agent",
       "name": "LLM Agent",
       "description": "LLM Agent、RAG、智能体外化、Wiki 模式",
       "clusterDir": "LLM_Agent",
-      "sourceTags": ["LLM", "Agent", "RAG", "Wiki", "LLM_Wiki"],
-      "relatedTopics": []
+      "sourceTags": [
+        "LLM",
+        "Agent",
+        "RAG",
+        "Wiki",
+        "LLM_Wiki"
+      ],
+      "relatedTopics": [],
+      "parentId": null,
+      "layer": 1,
+      "tags": [
+        "LLM",
+        "Agent",
+        "RAG",
+        "Wiki",
+        "LLM_Wiki"
+      ]
     },
     {
       "id": "Warp_Terminal",
       "name": "Warp Terminal",
       "description": "Warp Terminal 终端工具调研和使用",
       "clusterDir": "Warp_Terminal",
-      "sourceTags": ["Warp", "Terminal"],
-      "relatedTopics": []
+      "sourceTags": [
+        "Warp",
+        "Terminal"
+      ],
+      "relatedTopics": [],
+      "parentId": null,
+      "layer": 1,
+      "tags": [
+        "Warp",
+        "Terminal"
+      ]
     }
   ]
 }
