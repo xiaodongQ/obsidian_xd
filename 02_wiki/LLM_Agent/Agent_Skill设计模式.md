@@ -35,11 +35,11 @@ Markdown 正文：核心指令，建议 ≤500 行，超出部分拆到 referenc
 
 ### 三层渐进式加载
 
-| 层级 | 加载内容 | 加载时机 | Token 成本 |
-|------|----------|----------|-----------|
-| L1 目录层 | name + description | 会话启动时 | 每个 Skill ~50-100 tokens |
-| L2 指令层 | 完整 SKILL.md body | Skill 被激活时 | 建议 <5000 tokens |
-| L3 资源层 | scripts/、references/、assets/ | 指令引用时按需 | 视文件大小 |
+| 层级     | 加载内容                         | 加载时机       | Token 成本                |
+| ------ | ---------------------------- | ---------- | ----------------------- |
+| L1 目录层 | name + description           | 会话启动时      | 每个 Skill ~50-100 tokens |
+| L2 指令层 | 完整 SKILL.md body             | Skill 被激活时 | 建议 <5000 tokens         |
+| L3 资源层 | scripts/、references/、assets/ | 指令引用时按需    | 视文件大小                   |
 
 关键价值：即使安装了 20 个 Skill，初始加载也仅 1000-2000 tokens，相比单体式提示词上下文使用量减少约 **90%**。
 

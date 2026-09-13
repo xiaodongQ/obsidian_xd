@@ -64,3 +64,11 @@
 - https://github.com/HKUDS/CLI-Anything
 - https://github.com/jackwener/opencli
 - https://clianything.cc
+
+  "openai": {
+ 12       "api_key": "sk-cp-KgOfCAZKyPH_o4GV_tWl_UEk_NqdvcKpUtMNbRQ0I9QKE7R_TEaRJvm2DpMdPnVh__HuH6OMNb1UXN4wDwrjlPrqGhhNaiun0yfpklmcSX4b_gz9FwJkIJk",
+ 13       "base_url": "https://api.minimaxi.com/v1",
+ 14       "max_tokens": 4096,
+ 15       "model": "MiniMax-M3",
+ 16       "temperature": 0.7
+ 17     }

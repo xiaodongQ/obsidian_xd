@@ -20,23 +20,24 @@ date: 2026-05-09
 来自香港大学团队（HKUDS），核心思想是 **Harness Engineering**——为每个软件生成一个"安全护栏"（Harness），让 AI 在里面执行操作，不会失控。
 
 - 仓库：https://github.com/HKUDS/CLI-Anything
-- 社区 Hub：https://clianything.cc（pip install cli-anything-hub 后 cli-hub install <name>）
+- 社区 Hub：https://clianything.cc（pip install cli-anything-hub 后 `cli-hub install <name>`）
 - Claude Code 插件：`cli-anything-plugin/`，直接加载进 Claude Code 使用
 
 **已生成的 Harness 列表**（部分）：
-| 软件 | 测试数 | 类型 |
-|------|--------|------|
-| Blender | 208 tests | 3D 建模 |
-| GIMP | 107 tests | 图片编辑 |
-| Inkscape | 202 tests | 矢量绘图 |
-| Audacity | 161 tests | 音频编辑 |
-| OBS Studio | 153 tests | 录屏直播 |
-| Kdenlive | 155 tests | 视频剪辑 |
-| Draw.io | 138 tests | 图表绘制 |
-| LibreOffice | 158 tests | 办公套件 |
-| ComfyUI | 70 tests | AI 图像生成 |
-| Godot | — | 游戏引擎 |
-| Ollama | 98 tests | 本地 LLM |
+
+| 软件          | 测试数       | 类型      |
+| ----------- | --------- | ------- |
+| Blender     | 208 tests | 3D 建模   |
+| GIMP        | 107 tests | 图片编辑    |
+| Inkscape    | 202 tests | 矢量绘图    |
+| Audacity    | 161 tests | 音频编辑    |
+| OBS Studio  | 153 tests | 录屏直播    |
+| Kdenlive    | 155 tests | 视频剪辑    |
+| Draw.io     | 138 tests | 图表绘制    |
+| LibreOffice | 158 tests | 办公套件    |
+| ComfyUI     | 70 tests  | AI 图像生成 |
+| Godot       | —         | 游戏引擎    |
+| Ollama      | 98 tests  | 本地 LLM  |
 
 ### OpenCLI（jackwener/OpenCLI）
 
